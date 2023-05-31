@@ -18,6 +18,10 @@ const userSchema = mongoose.Schema({
     },
     modified_date: {
         type: Date,
-        default
+        default: null
     }
+}, {
+    versionKey: false
 })
+
+module.exports = mongoose.model('User', userSchema, 'user')

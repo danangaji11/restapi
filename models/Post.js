@@ -5,7 +5,7 @@ const postSchema = mongoose.Schema({
         required: true
     },
     user_id: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
     },
@@ -15,7 +15,7 @@ const postSchema = mongoose.Schema({
     },
     modified_date: {
         type: Date,
-        required: null
+        default: null
     },
     username: {
         type: String,
